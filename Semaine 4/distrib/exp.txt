@@ -1,0 +1,6 @@
+12 3 +
+->toto 
+10 + 
+toto - 
+2 x + +
+opp 50 add
