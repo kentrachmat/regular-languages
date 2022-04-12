@@ -1,0 +1,35 @@
+#!/bin/bash
+#Exemple de shell
+
+# sans variable
+echo "** Q1"
+egrep --color=auto '...expression reguliere...' Cyrano.txt
+
+# pour l'exercice 2 : avec des variables
+#declaration d'une variable
+#Attention: pas d'espace ni avant ni après le signe "=" quand on définit une variable.
+maVariable='... expression reguliere ...'
+#on peut définir une seconde variable à partir de la première, par concaténation :
+secondeVariable = "bon${maVariable}jour"
+
+echo "** Q1"
+egrep --color=auto -m 10 "${maVariable}" *.html
+
+
+
+Gr math info
+Noms XML 
+[a-zA-Z:_][a-zA-Z0-9:_.-]*
+
+Références d'entités XML
+&[a-zA-Z:_][a-zA-Z0-9:_.-]*;
+
+Valeurs d'attributs en XML
+"([^"<&]|&[a-zA-Z:_][a-zA-Z0-9:_.-]*;)*"
+
+Balises ouvrantes en XML
+exemple : < nom attribut1="valeur"   attribut2 = "valeur2"  >
+
+<nomsXML(\s+nomsXML\s*=\s*valeurXML\s*)*>
+
+<[a-zA-Z:_][a-zA-Z0-9:_.-]*(\s+[a-zA-Z:_][a-zA-Z0-9:_.-]*\s*=\s*"([^"<&]|&[a-zA-Z:_][a-zA-Z0-9:_.-]*;)*"\s*)*>

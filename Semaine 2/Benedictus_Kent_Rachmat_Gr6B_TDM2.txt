@@ -1,0 +1,44 @@
+# Benedictus Kent Rachmat
+# Groupe 6B
+# TDM 2 ALR
+
+echo "Ex 1"
+
+echo "** Q1"
+egrep -c --color=auto 'nez' Cyrano.txt
+
+echo "** Q2"
+egrep --color=auto '\(.*)' Cyrano.txt
+
+echo "** Q3"
+egrep --color=auto '\b[[:alpha:]]{5}\b' Cyrano.txt
+
+echo "** Q4"
+egrep --color=auto '[[:alpha:]]+\s:' Cyrano.txt
+
+echo "Ex 2"
+
+echo "** Q1"
+valeurAttribut='"([^"<&]|&[\w:.-]*;)*"'
+egrep -m 10 --color=auto "${valeurAttribut}" html/*.html
+
+echo "** Q2"
+nomXML='[a-zA-Z_][a-zA-Z0-9:_.-]'
+refEntite='&[a-zA-Z:_][\w:.-]*;'
+valeurAttribut='"([^"<&]|${refEntite})*"'
+baliseOuvrante="<${nomXML}*(\s+${nomXML}*\s*=\s*${valeurAttribut}\s*)*>"
+egrep -m 10 --color=auto "${baliseOuvrante}" html/*.html
+
+echo "** Q3"
+egrep -o --color=auto '([+]33\s\(0\)\s[0-9]|0[1-9])(.[0-9]{2})+' html/*.html
+
+echo "Ex 3"
+
+echo "** Q1"
+egrep --color=auto ',([[:digit:]]*4[[:digit:]]*)(BIS|TER)' bano-59009.csv
+
+echo "** Q2"
+egrep --color=auto "^([^,]*,){2}([^,]*Ascq[^,]*)(,[^,]*){5}" bano-59009.csv
+
+echo "** Q3"
+egrep --color=auto '([A-Z]*\s[A-Z]+\s?[A-Z]+[^[:lower:][:punct:]])+' bano-59009.csv
