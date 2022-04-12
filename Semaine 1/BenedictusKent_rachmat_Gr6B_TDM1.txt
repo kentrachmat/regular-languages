@@ -1,0 +1,33 @@
+Benedictus Kent Rachmat 
+Groupe 6B
+TDM 1
+
+1) expression:^[A-Z].*
+
+2) expression:[+]33[1-9][0-9]{8}
+
+3) expression:[02][1-9]|[13-8][0-9]|9[0-5]|(2A|2B)|97[1-6]
+
+4) expression:[a-zA-Z](_?[0-9a-zA-Z])*
+
+5) expression:0(_?[0-7])*|0x(_?|[0-9A-Fa-f])*|[1-9](_?[0-9])*
+
+6) expression:\s*|[a-zA-Z](_?[\w.])*(\s*,\s*[\w.](_?[\w.])*)*
+
+7) expression:["][\w.]*["] ou "[^"]*"
+
+8) expression:(["][\w.]*["])* ou "([^"]|"")*"
+
+9) expression:((["]|[\\])[\w.]*(["]|[\\]))* ou "([^"\\]|\\\\|\\")*"
+
+10) expression:^([a-zA-Z]|_|:)([\w.]|-)*
+
+11) expression:&[\w:][\w:.-]*;
+
+12) expression:"(&["<]|\w)*"
+
+13) expression:<([\sa-z.]*|="[a-z.]*")*>
+
+
+
+
